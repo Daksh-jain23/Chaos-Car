@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class CameraFollow : MonoBehaviour
+{
+
+    public Transform carTransform;
+    [Range(1, 10)]
+    public float followSpeed = 2;
+    [Range(1, 10)]
+    public float lookSpeed = 5;
+    public float followDistance = 10;
+    public float followHeight = 10;
+    Vector3 initialCameraPosition;
+    Vector3 initialCarPosition;
+    Vector3 absoluteInitCameraPosition;
+
+    void Start()
+    {
+        initialCameraPosition = gameObject.transform.position;
+        initialCarPosition = carTransform.position;
+        absoluteInitCameraPosition = initialCameraPosition - initialCarPosition;
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 forward = carTransform.forward;
+
+        //Move to car
+        Vector3 _targetPos = carTransform.position - carTransform.forward * followDistance + new Vector3(0, followHeight, 0);
+        transform.position = Vector3.Lerp(transform.position, _targetPos, followSpeed * Time.deltaTime);
+
+        //Look at car
+        Vector3 _lookDirection = (new Vector3(carTransform.position.x, carTransform.position.y, carTransform.position.z)) - transform.position;
+        Quaternion _rot = Quaternion.LookRotation(_lookDirection, Vector3.up);
+        transform.rotation = Quaternion.Lerp(transform.rotation, _rot, lookSpeed * Time.deltaTime);
+    }
+
+}
