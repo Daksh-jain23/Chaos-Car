@@ -22,7 +22,7 @@ using System.Threading;
 
 public class PrometeoCarController : MonoBehaviour
 {
-
+    bool firsttimetrigger = true;
     public TMP_Text controlsUIText; // Drag your UI Text component here
 
     // Add these variables to the class
@@ -39,8 +39,7 @@ public class PrometeoCarController : MonoBehaviour
     };
 
     // Add this for UI display
-    public GameObject uimanager;
-    private Uiscript uiscript;
+    public Uiscript uiscript;
     //CAR SETUP
     UnityEngine.Vector3 initialpos;
     UnityEngine.Quaternion initialrot;
@@ -190,7 +189,6 @@ public class PrometeoCarController : MonoBehaviour
     void Start()
     {
         // ui scrip
-        uiscript = uimanager.GetComponent<Uiscript>();
         initialpos = transform.position;
         initialrot = transform.rotation;
 
@@ -980,6 +978,12 @@ public class PrometeoCarController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        StartCoroutine(gameoverdelay());
+    }
+
+    IEnumerator gameoverdelay()
+    {
+        yield return new WaitForSeconds(0.5f);
         forwardKey = possibleKeys[0];
         reverseKey = possibleKeys[2];
         leftKey = possibleKeys[1];
@@ -993,5 +997,31 @@ public class PrometeoCarController : MonoBehaviour
         transform.rotation = initialrot;
         uiscript.Game_Over();
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("back"))
+        {
+            if(firsttimetrigger){
+                firsttimetrigger = false;
+            }
+            else
+            {
+                uiscript.Addscore(-1);
+                firsttimetrigger=true;
+            }
+        }
 
+        if(other.CompareTag("Front") )
+        {
+            if (!firsttimetrigger)
+            {
+                firsttimetrigger = true;
+                uiscript.Addscore(1);
+            }
+            else
+            {
+                firsttimetrigger= false;
+            }
+        }
+    }
 }

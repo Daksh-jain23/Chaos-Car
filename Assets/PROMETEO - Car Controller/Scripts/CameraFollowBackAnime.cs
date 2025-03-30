@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-
     public Transform carTransform;
     [Range(1, 10)]
     public float followSpeed = 2;
     [Range(1, 10)]
-    public float lookSpeed = 5;
-    public float followDistance = 10;
-    public float followHeight = 10;
+    public float lookSpeed = 5.5f;
+    public float followDistance = 35.0f;
+    public float followHeight = 8.0f;
     Vector3 initialCameraPosition;
     Vector3 initialCarPosition;
     Vector3 absoluteInitCameraPosition;
