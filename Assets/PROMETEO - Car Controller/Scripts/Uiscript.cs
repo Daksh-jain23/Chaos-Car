@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class Uiscript : MonoBehaviour
 {
+
     public GameObject ourcar;
     Rigidbody carRigidbody;
 
@@ -25,6 +26,8 @@ public class Uiscript : MonoBehaviour
     public GameObject[] popup;
     public float popup_posx = 500.0f;
     public float popup_posy = 280.0f;
+
+    public Button Menu;
     public Button replay;
     private List<GameObject> popups = new List<GameObject>();
     // Start is called before the first frame update
@@ -100,24 +103,26 @@ public class Uiscript : MonoBehaviour
         else
         {
             replay.interactable = false;
+            Menu.interactable = false;
             int maximumpopup = Random.Range(1, 6);
             while (maximumpopup != 0)
             {
                 maximumpopup--;
                 int index_pop = Random.Range(0, popup.Length);
-                spawn_popup(popup[index_pop]);
+                spawn_popup(popup[index_pop],index_pop);
             }
             maximumtry--;
         }
     }
 
-    public void spawn_popup(GameObject specific_popup)
+    public void spawn_popup(GameObject specific_popup,int index)
     {
         GameObject newpopup = Instantiate(specific_popup, GameOverPage.transform);
         RectTransform rectTransform = newpopup.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = new Vector2(Random.Range(-popup_posx, popup_posx), Random.Range(-popup_posy, popup_posy));
         newpopup.SetActive(true);
         popups.Add(newpopup);
+        newpopup.GetComponent<Popupclose>().set_index(index);
     }
 
 
@@ -154,6 +159,7 @@ public class Uiscript : MonoBehaviour
         if (popups.Count == 0)
         {
             replay.interactable = true;
+            Menu.interactable = true;
         }
     }
 }

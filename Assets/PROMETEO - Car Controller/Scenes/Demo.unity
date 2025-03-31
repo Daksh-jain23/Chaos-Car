@@ -468,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!1 &92364040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 0}
+  SoundPlayer: {fileID: 0}
 --- !u!1 &216884634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 934883528070179459, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
@@ -2052,7 +2054,7 @@ GameObject:
   - component: {fileID: 350138772}
   - component: {fileID: 350138773}
   m_Layer: 5
-  m_Name: Popup (5)
+  m_Name: Popup (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2093,6 +2095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!1 &354750138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,12 +2289,13 @@ MonoBehaviour:
   - {fileID: 519326073}
   - {fileID: 83358187}
   - {fileID: 895085788}
-  - {fileID: 1681012226}
   - {fileID: 350138771}
+  - {fileID: 1681012226}
   - {fileID: 1017840260}
   - {fileID: 544067877}
   popup_posx: 500
   popup_posy: 280
+  Menu: {fileID: 1894502285}
   replay: {fileID: 1954709175}
 --- !u!1 &417251920
 GameObject:
@@ -3067,6 +3071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!1 &544067877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,6 +3124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!65 &550378081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3411,6 +3417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 0}
+  SoundPlayer: {fileID: 0}
 --- !u!1 &624397469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3616,7 +3623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1468.2, y: 363.07626}
+  m_AnchoredPosition: {x: -1468.2031, y: 363.07812}
   m_SizeDelta: {x: 535.69, y: 125.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637252799
@@ -3927,6 +3934,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689600284}
   m_Mesh: {fileID: 3613567641014311022, guid: aa35326e084c5774b9fea1733afca70f, type: 3}
+--- !u!1001 &771184089
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 23159533075843658, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9aa614e2d1186cf49b0f917028e5ac1e, type: 3}
+    - target: {fileID: 4372067666529316655, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_Name
+      value: AudioPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.14026
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.65204
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -32.59597
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561911495263582108, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
 --- !u!1 &785907299
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,6 +4510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!1 &941690865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +5042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!1 &1066553439
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,15 +5074,15 @@ RectTransform:
   - {fileID: 1328483714}
   - {fileID: 847457005}
   - {fileID: 1954709174}
+  - {fileID: 1894502284}
   - {fileID: 1843705753}
   - {fileID: 519326074}
   - {fileID: 83358188}
   - {fileID: 895085789}
-  - {fileID: 1681012227}
   - {fileID: 350138772}
+  - {fileID: 1681012227}
   - {fileID: 1017840261}
   - {fileID: 544067878}
-  - {fileID: 1894502284}
   - {fileID: 2108945676}
   m_Father: {fileID: 1144274278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8779,7 +8849,7 @@ GameObject:
   - component: {fileID: 1681012227}
   - component: {fileID: 1681012228}
   m_Layer: 5
-  m_Name: Popup (4)
+  m_Name: Popup (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8820,6 +8890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!1 &1697935061
 GameObject:
   m_ObjectHideFlags: 0
@@ -8928,7 +8999,7 @@ MonoBehaviour:
   carTransform: {fileID: 543450653621877418}
   followSpeed: 2
   lookSpeed: 5.5
-  followDistance: 35
+  followDistance: 30
   followHeight: 8
 --- !u!1 &1713411447
 GameObject:
@@ -8988,7 +9059,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Creators - L hopital, DJ, Anime\n\nAssets -\n   Mena\n   mena-assets.com/\n  
-    contact@mena-assets.com\n   Prometeo: Car Controller\n\t"
+    Prometeo: Car Controller\n\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9180,7 +9251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 453, y: -38.719414}
+  m_AnchoredPosition: {x: 453, y: -38.71875}
   m_SizeDelta: {x: 535.68, y: -954.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731465927
@@ -9485,6 +9556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Uiscript: {fileID: 403648949}
+  SoundPlayer: {fileID: 1873835208}
 --- !u!1 &1849280609
 GameObject:
   m_ObjectHideFlags: 0
@@ -9621,6 +9693,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849280609}
   m_CullTransparentMesh: 1
+--- !u!114 &1873835208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 23159533075843658, guid: 7ae5d29b1ed6be64ca4d94f45ae11020, type: 3}
+  m_PrefabInstance: {fileID: 771184089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1052576ef37e049839d9ed514d56e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1879384629
 GameObject:
   m_ObjectHideFlags: 0
@@ -9732,7 +9815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: 101.27}
+  m_AnchoredPosition: {x: 0.000030518, y: -214}
   m_SizeDelta: {x: 458.306, y: 116.064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894502285
@@ -10027,7 +10110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -499, y: 101.27}
+  m_AnchoredPosition: {x: 0.000030518, y: -32}
   m_SizeDelta: {x: 458.30603, y: 116.063965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954709175
@@ -10160,7 +10243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1468.2, y: 221.57626}
+  m_AnchoredPosition: {x: -1468.2031, y: 221.57812}
   m_SizeDelta: {x: 535.69, y: 125.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968069002
@@ -12435,6 +12518,7 @@ SceneRoots:
   - {fileID: 299688005468115882}
   - {fileID: 1486257510}
   - {fileID: 543450653150262629}
+  - {fileID: 771184089}
   - {fileID: 1144274278}
   - {fileID: 500328634}
   - {fileID: 36085618}
